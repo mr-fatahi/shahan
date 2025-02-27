@@ -42,7 +42,10 @@
           <li class="nav__item"><a href="#">ارتباط باما</a></li>
         </ul>
         <div class="nav__cart">
-          <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          <span class="badge badge__cart cart__badge">0</span>
+          <button class="cart__btn">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
         </div>
       </nav>
       <section class="header__backdrop"></section>
@@ -64,7 +67,71 @@
         </ul>
       </section>
     </header>
-    <span class="badge">1</span>
-    <script src="/js/app.js"></script>
+    <main class="container block">
+      <h1 class="main__title">محصولات قنادی شاهان</h1>
+      <section class="products">
+        <!-- <section class="product block">
+          <div class="product__image">
+            <img src="/public/images/products/birthday-cake/1.jpg" alt="birthday-cake">
+          </div>
+          <div class="product__description">
+            <a class="product__name" href="#">کیک تولد</a>
+            <p class="product__filling">فیلینگ: <span class="badge badge__tag">موز</span><span class="badge badge__tag">گردو</span></p>
+            <div class="product__control">
+              <button class="btn btn--primary">افزودن به سبد</button>
+              <p class="product__price"><span>500000</span> تومان</p>
+            </div>
+          </div>
+        </section> -->
+      </section>
+      <div class="cart__backdrop hidden">
+        <section class="cart__content">
+          <div class="cart__modal__container">
+            <!-- <div class="cart__modal">
+              <div class="cart__image">
+                <img
+                  src="/public/images/products/birthday-cake/1.jpg"
+                  alt="birthday-cake"
+                />
+              </div>
+              <div class="cart__info">
+                <p class="cart__product__name">کیک تولد</p>
+                <p class="cart__product__filling">
+                  فیلینگ: <span class="badge badge__tag">موز</span>
+                </p>
+                <p class="cart__product__price">
+                  <span class="price">300,000</span> تومان
+                </p>
+              </div>
+              <div class="cart__action">
+                <div class="action__inc-dec">
+                  <span class="action__inc"
+                    ><i class="fa-solid fa-chevron-up"></i
+                  ></span>
+                  <span class="qty">0</span>
+                  <span class="action__dec"
+                    ><i class="fa-solid fa-chevron-down"></i
+                  ></span>
+                </div>
+                <span class="action__del"
+                  ><i class="fa-solid fa-trash-can"></i
+                ></span>
+              </div>
+            </div> -->
+          </div>
+          <div class="cart__overview">
+            <div class="cart__overview__price">
+              <p>مبلغ قابل پرداخت:</p>
+              <p><span class="cart__total">0</span> تومان</p>
+            </div>
+            <div class="cart__overview__action">
+              <button class="btn btn--primary clear-cart">پاک کردن سبد</button>
+              <button class="btn btn--secondary close-modal">انصراف</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script type="module" src="/js/app.js"></script>
   </body>
 </html>
