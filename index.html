@@ -67,23 +67,108 @@
         </ul>
       </section>
     </header>
-    <main class="container block">
-      <h1 class="main__title">محصولات قنادی شاهان</h1>
-      <section class="products">
-        <!-- <section class="product block">
-          <div class="product__image">
-            <img src="/public/images/products/birthday-cake/1.jpg" alt="birthday-cake">
-          </div>
-          <div class="product__description">
-            <a class="product__name" href="#">کیک تولد</a>
-            <p class="product__filling">فیلینگ: <span class="badge badge__tag">موز</span><span class="badge badge__tag">گردو</span></p>
-            <div class="product__control">
-              <button class="btn btn--primary">افزودن به سبد</button>
-              <p class="product__price"><span>500000</span> تومان</p>
+    <main class="container">
+      <h1 class="main__title block">محصولات قنادی شاهان</h1>
+      <div class="sort-and-filter block">
+        <button
+          data-type="filter"
+          class="btn btn--transparent btn--block filter-btn"
+        >
+          فیلتر محصولات
+        </button>
+        <button
+          data-type="sort"
+          class="btn btn--transparent btn--block filter-btn"
+        >
+          مرتب سازی
+        </button>
+      </div>
+      <div class="products__body">
+        <section class="products block">
+          <!-- <section class="product block">
+            <div class="product__image">
+              <img src="/public/images/products/birthday-cake/1.jpg" alt="birthday-cake">
+            </div>
+            <div class="product__description">
+              <a class="product__name" href="#">کیک تولد</a>
+              <p class="product__filling">فیلینگ: <span class="badge badge__tag">موز</span><span class="badge badge__tag">گردو</span></p>
+              <div class="product__control">
+                <button class="btn btn--primary">افزودن به سبد</button>
+                <p class="product__price"><span>500000</span> تومان</p>
+              </div>
+            </div>
+          </section> -->
+        </section>
+        <div class="sort-filter-backdrop"></div>
+        <div class="filters">
+          <div data-type="filter" class="sort-filter-modal">
+            <div class="modal__header">
+              <p>دسته بندی محصولات</p>
+              <button class="btn menu__close-btn close-filter-modal">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div class="modal__body">
+              <div class="modal__accardion">
+                <div data-type="filter" class="accardion__header">
+                  <p>دسته محصول</p>
+                  <i class="fa-solid fa-chevron-down accardion-chevron"></i>
+                </div>
+                <div data-type="filter" class="accardion__body">
+                  <div class="accardion__item">
+                    <input name="checkbox" type="checkbox" id="birthdayCake" />
+                    <label for="birthdayCake">کیک تولد</label>
+                  </div>
+                  <div class="accardion__item">
+                    <input name="checkbox" type="checkbox" id="eveningCake" />
+                    <label for="eveningCake">کیک عصرانه</label>
+                  </div>
+                  <div class="accardion__item">
+                    <input name="checkbox" type="checkbox" id="creamyPastry" />
+                    <label for="creamyPastry">شیرینی تر</label>
+                  </div>
+                  <div class="accardion__item">
+                    <input name="checkbox" type="checkbox" id="drySweets" />
+                    <label for="drySweets">شیرینی خشک</label>
+                  </div>
+                  <div class="accardion__item">
+                    <input name="checkbox" type="checkbox" id="cookie" />
+                    <label for="cookie">کوکی</label>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn--primary btn--block submit-filter">اعمال فیلتر</button>
             </div>
           </div>
-        </section> -->
-      </section>
+          <div data-type="sort" class="sort-filter-modal">
+            <div class="modal__header">
+              <p>مرتب سازی محصولات</p>
+              <button class="btn menu__close-btn close-filter-modal">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div class="modal__body">
+              <div class="modal__accardion">
+                <div data-type="sort" class="accardion__header">
+                  <p>مرتب سازی</p>
+                  <i class="fa-solid fa-chevron-down accardion-chevron"></i>
+                </div>
+                <div data-type="sort" class="accardion__body">
+                  <div class="accardion__item">
+                    <input type="radio" id="latest" name="sort" />
+                    <label for="latest">جدیدترین</label>
+                  </div>
+                  <div class="accardion__item">
+                    <input type="radio" id="earliest" name="sort" />
+                    <label for="earliest">قدیمی ترین</label>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn--primary btn--block submit-filter">اعمال فیلتر</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="cart__backdrop hidden">
         <section class="cart__content">
           <div class="cart__modal__container">

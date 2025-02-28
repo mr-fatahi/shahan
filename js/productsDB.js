@@ -5,6 +5,8 @@ export const products = [
     filling: ["موز", "گردو"],
     price: 500_000,
     imageUrl: "/public/images/products/birthday-cake/1.jpg",
+    category: "birthdayCake",
+    createdAt: "2025-02-26T03:58:55.601Z",
   },
   {
     id: 2,
@@ -12,6 +14,8 @@ export const products = [
     filling: ["موز", "گردو"],
     price: 500_000,
     imageUrl: "/public/images/products/birthday-cake/2.jpg",
+    category: "birthdayCake",
+    createdAt: "2024-02-26T04:28:55.601Z",
   },
   {
     id: 3,
@@ -19,6 +23,8 @@ export const products = [
     filling: ["موز", "گردو"],
     price: 500_000,
     imageUrl: "/public/images/products/birthday-cake/3.jpg",
+    category: "birthdayCake",
+    createdAt: "2023-02-26T04:48:55.601Z",
   },
   {
     id: 4,
@@ -26,6 +32,8 @@ export const products = [
     filling: ["موز", "گردو", "گیلاس"],
     price: 500_000,
     imageUrl: "/public/images/products/birthday-cake/4.jpg",
+    category: "birthdayCake",
+    createdAt: "2022-02-26T05:28:55.601Z",
   },
   {
     id: 5,
@@ -33,6 +41,8 @@ export const products = [
     filling: ["موز", "گردو"],
     price: 500_000,
     imageUrl: "/public/images/products/cookie/1.jpg",
+    category: "cookie",
+    createdAt: "2025-02-26T05:58:55.601Z",
   },
   {
     id: 6,
@@ -40,6 +50,8 @@ export const products = [
     filling: ["موز", "گردو"],
     price: 500_000,
     imageUrl: "/public/images/products/cookie/2.jpg",
+    category: "cookie",
+    createdAt: "2025-02-26T06:28:55.601Z",
   },
   {
     id: 7,
@@ -47,6 +59,8 @@ export const products = [
     filling: ["موز", "گردو"],
     price: 500_000,
     imageUrl: "/public/images/products/cookie/3.jpg",
+    category: "cookie",
+    createdAt: "2025-02-27T04:28:55.601Z",
   },
   {
     id: 8,
@@ -54,6 +68,8 @@ export const products = [
     filling: ["موز", "گردو"],
     price: 500_000,
     imageUrl: "/public/images/products/creamy-pastry/1.jpg",
+    category: "creamyPastry",
+    createdAt: "2025-02-27T04:58:55.601Z",
   },
   {
     id: 9,
@@ -61,6 +77,8 @@ export const products = [
     filling: ["موز", "گردو"],
     price: 500_000,
     imageUrl: "/public/images/products/creamy-pastry/2.jpg",
+    category: "creamyPastry",
+    createdAt: "2025-02-27T05:28:55.601Z",
   },
   {
     id: 10,
@@ -68,6 +86,8 @@ export const products = [
     filling: ["موز", "گردو"],
     price: 500_000,
     imageUrl: "/public/images/products/creamy-pastry/3.jpg",
+    category: "creamyPastry",
+    createdAt: "2025-02-27T05:48:55.601Z",
   },
   {
     id: 11,
@@ -75,6 +95,8 @@ export const products = [
     filling: ["موز", "گردو"],
     price: 500_000,
     imageUrl: "/public/images/products/dry-sweets/1.jpg",
+    category: "drySweets",
+    createdAt: "2020-02-27T06:28:55.601Z",
   },
   {
     id: 12,
@@ -82,6 +104,8 @@ export const products = [
     filling: ["موز", "گردو"],
     price: 500_000,
     imageUrl: "/public/images/products/dry-sweets/2.jpg",
+    category: "drySweets",
+    createdAt: "2025-02-27T06:48:55.601Z",
   },
   {
     id: 13,
@@ -89,6 +113,8 @@ export const products = [
     filling: ["موز", "گردو"],
     price: 500_000,
     imageUrl: "/public/images/products/dry-sweets/3.jpg",
+    category: "drySweets",
+    createdAt: "2025-02-27T07:28:55.601Z",
   },
   {
     id: 14,
@@ -96,6 +122,8 @@ export const products = [
     filling: ["موز", "گردو"],
     price: 500_000,
     imageUrl: "/public/images/products/evening-cake/1.jpg",
+    category: "eveningCake",
+    createdAt: "2025-02-27T08:28:55.601Z",
   },
   {
     id: 15,
@@ -103,6 +131,8 @@ export const products = [
     filling: ["موز", "گردو", "توت فرنگی"],
     price: 500_000,
     imageUrl: "/public/images/products/evening-cake/2.jpg",
+    category: "eveningCake",
+    createdAt: "2025-02-27T08:58:55.601Z",
   },
   {
     id: 16,
@@ -110,5 +140,7 @@ export const products = [
     filling: ["موز", "گردو"],
     price: 500_000,
     imageUrl: "/public/images/products/evening-cake/3.jpg",
+    category: "eveningCake",
+    createdAt: "2025-02-28T03:58:55.601Z",
   },
 ];

@@ -25,7 +25,9 @@
   --radius-sm: 5px;
   --radius-md: 7px;
   --radius-lg: 11px;
+  --radius-xl: 25px;
   --shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  --transition-little-soft: all 0.15s ease-out;
   --transition-soft: all 0.3s ease-out;
   --transition-very-soft: all 0.5s ease-out;
 }
@@ -58,7 +60,7 @@ h1 {
   padding: 1rem 2rem;
 }
 .container {
-  max-width: 1140px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 img {
@@ -79,6 +81,13 @@ img {
   white-space: nowrap;
   border-radius: var(--radius-md);
 }
+.btn--transparent {
+  background-color: transparent;
+  border: 2px solid var(--color-gray);
+  color: var(--color-link);
+  font-size: 1.6rem;
+  border-radius: var(--radius-lg);
+}
 .btn--primary {
   background-color: var(--color-primary);
   border: 1px solid var(--color-primary);
@@ -92,6 +101,9 @@ img {
   background-color: var(--color-white);
   border: 1px solid var(--color-primary);
   color: var(--color-primary);
+}
+.btn--block {
+  width: 100%;
 }
 /* Badge */
 .badge {
@@ -243,7 +255,123 @@ img {
 /* Products */
 .main__title {
   padding-top: 3rem;
-  margin-bottom: 7rem;
+  margin-bottom: 2rem;
+}
+.sort-and-filter {
+  margin-bottom: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.filter-btn {
+  display: block;
+}
+.sort-filter-backdrop {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+.sort-filter-modal {
+  width: 100%;
+  position: fixed;
+  bottom: -100%;
+  opacity: 0;
+  background-color: var(--bgColor-body);
+  transition: var(--transition-very-soft);
+  z-index: 3;
+  border-top-left-radius: var(--radius-xl);
+  border-top-right-radius: var(--radius-xl);
+}
+.modal__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.modal__header > p {
+  width: 100%;
+  text-align: center;
+}
+.modal__header .fa-xmark {
+  color: var(--color-link);
+}
+.modal__body {
+  padding: 2rem;
+}
+.modal__accardion {
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+.accardion__header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+.accardion__header .fa-chevron-down {
+  cursor: pointer;
+  color: var(--color-link);
+  transition: var(--transition-little-soft);
+}
+.accardion__header .fa-chevron-down.rotate {
+  transform: rotate(180deg);
+}
+.accardion__body {
+  display: none;
+  height: 0;
+  opacity: 0;
+  border-top: 2px solid var(--color-gray);
+  transition: var(--transition-little-soft);
+}
+.accardion__body.extended {
+  display: block;
+  height: auto;
+  opacity: 1;
+  padding: 2rem;
+}
+.accardion__item {
+  margin-bottom: 1rem;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  visibility: hidden;
+  position: absolute;
+}
+input[type="checkbox"] + label::before,
+input[type="radio"] + label::before {
+  content: " ";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-gray);
+  vertical-align: middle;
+  margin-left: 0.7rem;
+}
+input[type="checkbox"]:checked + label::before {
+  background-color: var(--color-primary);
+  content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="12" height="14" fill="white" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>');
+  text-align: center;
+}
+input[type="radio"]:checked + label::before {
+  border: 6px solid var(--color-primary);
+  background-color: white;
+}
+input[type="radio"] + label::before {
+  border-radius: 50%;
+}
+input[type="checkbox"] + label::before {
+  border-radius: 3px;
+}
+.products__body {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 .products {
   display: grid;
@@ -314,6 +442,40 @@ img {
   }
 }
 @media screen and (min-width: 1024px) {
+  .filter-btn {
+    display: none;
+  }
+  .products__body {
+    grid-template-columns: minmax(150px, 300px) 1fr;
+  }
+  .sort-filter-backdrop {
+    display: none;
+    width: 0;
+    height: 0;
+    position: static;
+    background-color: transparent;
+    z-index: 0;
+  }
+  .filters{
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .sort-filter-modal {
+    width: auto;
+    position: static;
+    opacity: 1;
+    z-index: 0;
+  }
+  .modal__header,
+  .submit-filter {
+    display: none;
+  }
+  .modal__accardion{
+    font-size: 1.4rem;
+    margin-top: -25px;
+  }
+}
+@media screen and (min-width:1280px) {
   .products {
     grid-template-columns: 1fr 1fr 1fr;
   }
